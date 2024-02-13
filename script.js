@@ -42,7 +42,8 @@ map.on('load', () => {
     // Add a data source from a Mapbox tileset
     map.addSource('green-tiles', { // Create your own source ID
         'type': 'vector',
-        'url': 'mapbox://valdess004.8wwj4ysf' // Update to your mapbox tileset ID
+        'url': 'mapbox://valdess004.8wwj4ysf', // Update to your mapbox tileset ID
+        'minZoom' : 10
     });
 
     map.addLayer({
