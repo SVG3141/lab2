@@ -43,7 +43,6 @@ map.on('load', () => {
     map.addSource('green-tiles', { // Create your own source ID
         'type': 'vector',
         'url': 'mapbox://valdess004.8wwj4ysf', // Update to your mapbox tileset ID
-        'minZoom' : 10
     });
 
     map.addLayer({
@@ -53,14 +52,11 @@ map.on('load', () => {
         'paint': {
             'fill-color': '#69B00B', // Test alternative colours and style properties
             'fill-opacity': 0.6,
-            'fill-outline-color': 'black'
+            'fill-outline-color': 'grey'
         },  
         'source-layer': 'gspace-195a56' // Tileset NAME (diff to ID), get this from mapbox tileset page
-     }, ('bike-routes','ac-buildings')
-    // Drawing order - places layer below points
-    // Here the addlayer method takes 2 arguments (the layer as an object and a
-    // string for another layer's name). If the other layer already exists, the new layer
-    // will be drawn before that one
+     }, 'bike-routes'
+   
     );
     
 });
